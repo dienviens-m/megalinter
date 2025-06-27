@@ -1,27 +1,34 @@
-import java.util.*     // Unused import to test linter
+class Calculator {
 
-class HelloWorld {
+    String greetUser(String name) {
+        return "Hello, ${name}!"
+    }
 
-def sayHello(name){
-    if(name == null){
-        println("Hello, Stranger!")
-    } else{
-            println("Hello, " + name ) } // inconsistent spacing and braces
+    int add(int a, int b) {
+        return a + b
+    }
+
+    int subtract(int a, int b) {
+        return a - b
+    }
+
+    int multiply(int a, int b) {
+        return a * b
+    }
+
+    double divide(int a, int b) {
+        if (b == 0) {
+            throw new IllegalArgumentException("Division by zero is not allowed.")
+        }
+        return a / b
+    }
 }
 
-def calculateSum(a, b){
-return a + b } // bad formatting
+// Run the code
+def calc = new Calculator()
 
-def methodWithLongLine(){
-    println("This is a very long line that is meant to exceed the typical 100 characters limit which most linters usually complain about in code reviews.")
-}
-
-def unusedMethod(){
-    def x = 5
-}
-
-}
-
-def hello = new HelloWorld()
-hello.sayHello("Groovy")
-hello.calculateSum(10, 20)
+println calc.greetUser("Groovy Developer")
+println "Add: ${calc.add(10, 5)}"
+println "Subtract: ${calc.subtract(10, 5)}"
+println "Multiply: ${calc.multiply(10, 5)}"
+println "Divide: ${calc.di
