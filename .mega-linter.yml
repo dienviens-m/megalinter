@@ -6,6 +6,8 @@ DISABLE_LINTERS: all
 
 GROOVY:
   DISABLE: false
+
+GROOVY_NPM_GROOVY_LINT_RULES_PATH: LINTER_DEFAULT
 # all, none, or list of linter keys
 APPLY_FIXES: none
 
