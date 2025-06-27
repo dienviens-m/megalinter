@@ -1,28 +1,20 @@
-class Calculator {
+class SimpleMath {
 
-    String greetUser(String name) {
+    // Method to calculate the square of a number
+    int square(int number) {
+        return number * number
+    }
+
+    // Method to greet the user
+    String greet(String name) {
         return "Hello, ${name}!"
-    }
-
-    int add(int a, int b) {
-        return a + b
-    }
-
-    int subtract(int a, int b) {
-        return a - b
-    }
-
-    int multiply(int a, int b) {
-        return a * b
-    }
-
-    double divide(int a, int b) {
-        if (b == 0) {
-            throw new IllegalArgumentException("Division by zero is not allowed.")
-        }
-        return a / b
     }
 }
 
-// Run the code
-def calc = new Calculator()
+// Create an instance and call the methods
+SimpleMath math = new SimpleMath()
+
+String greeting = math.greet("Groovy User")
+int result = math.square(7)
+
+// The variables `greeting` and `result` now hold values, but nothing is printed
