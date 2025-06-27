@@ -35,17 +35,19 @@ concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
   cancel-in-progress: true
 
+# Give the default GITHUB_TOKEN write permission to commit and push, comment
+# issues, and post new Pull Requests; remove the ones you do not need
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
 jobs:
   megalinter:
     name: MegaLinter
     runs-on: ubuntu-latest
 
-    # Give the default GITHUB_TOKEN write permission to commit and push, comment
-    # issues, and post new Pull Requests; remove the ones you do not need
-    permissions:
-      contents: write
-      pull-requests: write
-
+ 
     steps:
       # Git Checkout
       - name: Checkout Code
@@ -189,6 +191,8 @@ jobs:
               github.head_ref ||
               github.ref
             }}
+    branch: ${{ github.event.pull_request.head.ref || github.head_ref || github.ref }}
+    branch: ${{ github.event.pull_request.head.ref || github.head_ref || github.ref }}
           commit_message: "[MegaLinter] Apply linters fixes"
           commit_user_name: megalinter-bot
           commit_user_email: 129584137+megalinter-bot@users.noreply.github.com

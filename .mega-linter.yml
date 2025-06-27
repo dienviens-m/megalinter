@@ -1,39 +1,29 @@
 # Configuration file for MegaLinter
-#
-# See all available variables at https://megalinter.io/latest/config-file/ and in
-# linters documentation
+# See all available variables at https://megalinter.io/latest/config-file/ and in linters documentation
 
-# Disable All Linters
-DISABLE_LINTERS: all
+# Disable all linters
+DISABLE_LINTERS:
+  - all
 
-#Enable only Groovy Linter
-GROOVY:
-  DISABLE: false
+# Enable only the Groovy linter
+ENABLE_LINTERS:
+  - GROOVY
 
-# Set the rule path on default
+# Groovy Linter settings
 GROOVY_NPM_GROOVY_LINT_RULES_PATH: LINTER_DEFAULT
 
 # Remove checking of the file names
 SPELL_CSPELL_ANALYZE_FILE_NAMES: false
 
-# all, none, or list of linter keys
+# Whether to apply fixes
 APPLY_FIXES: none
 
-# If you use ENABLE variable, all other languages/formats/tooling-formats will
-# be disabled by default
-# ENABLE:
-
-# If you use ENABLE_LINTERS variable, all other linters will be disabled by
-# default
-# ENABLE_LINTERS:
-
+# Disable specific features
 DISABLE:
   - COPYPASTE
   - YAML_V8R
-  # Comment to enable checks of excessive copy-pastes
-  # - SPELL # Uncomment to disable checks of spelling mistakes
 
+# Show elapsed time in logs
 SHOW_ELAPSED_TIME: true
 # Uncomment if you want MegaLinter to detect errors but not block CI to pass
 # DISABLE_ERRORS: true
-
