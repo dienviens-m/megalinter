@@ -20,7 +20,8 @@ APPLY_FIXES: none
 # ENABLE_LINTERS:
 
 DISABLE:
-  - COPYPASTE # Comment to enable checks of excessive copy-pastes
+  - COPYPASTE
+  - YAML_V8R # Comment to enable checks of excessive copy-pastes
   # - SPELL # Uncomment to disable checks of spelling mistakes
 
 SHOW_ELAPSED_TIME: true
