@@ -2,7 +2,10 @@
 #
 # See all available variables at https://megalinter.io/latest/config-file/ and in
 # linters documentation
+DISABLE_LINTERS: all
 
+GROOVY:
+  DISABLE: false
 # all, none, or list of linter keys
 APPLY_FIXES: none
 
@@ -19,6 +22,5 @@ DISABLE:
   # - SPELL # Uncomment to disable checks of spelling mistakes
 
 SHOW_ELAPSED_TIME: true
-
 # Uncomment if you want MegaLinter to detect errors but not block CI to pass
 # DISABLE_ERRORS: true
