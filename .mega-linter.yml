@@ -2,12 +2,20 @@
 #
 # See all available variables at https://megalinter.io/latest/config-file/ and in
 # linters documentation
+
+# Disable All Linters
 DISABLE_LINTERS: all
 
+#Enable only Groovy Linter
 GROOVY:
   DISABLE: false
 
+# Set the rule path on default
 GROOVY_NPM_GROOVY_LINT_RULES_PATH: LINTER_DEFAULT
+
+# Remove checking of the file names
+SPELL_CSPELL_ANALYZE_FILE_NAMES: false
+
 # all, none, or list of linter keys
 APPLY_FIXES: none
 
@@ -28,3 +36,4 @@ DISABLE:
 SHOW_ELAPSED_TIME: true
 # Uncomment if you want MegaLinter to detect errors but not block CI to pass
 # DISABLE_ERRORS: true
+
