@@ -26,9 +26,3 @@ class Calculator {
 
 // Run the code
 def calc = new Calculator()
-
-println calc.greetUser("Groovy Developer")
-println "Add: ${calc.add(10, 5)}"
-println "Subtract: ${calc.subtract(10, 5)}"
-println "Multiply: ${calc.multiply(10, 5)}"
-println "Divide: ${calc.di
