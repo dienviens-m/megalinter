@@ -1,13 +1,11 @@
-class SimpleMath {
+def sayHello() {
+  println "Hello, world!"
+  def result = 5 + * 2
+  def 123invalid = "Bad name"
+  def result = val ++ + 5
 
-    // Method to calculate the square of a number
-    int square(int number) {
-        return number * number
-    }
+// Missing closing }
 
-    // Method to greet the user
-    String greet(String name) {
-        return "Hello, ${name}!"
-    }
-    
+class {
+  def name = "Oops"
 }
