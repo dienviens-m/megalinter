@@ -1,6 +1,1 @@
-{
-  "extends": "recommended",
-  "rules": {
-    "convention.CompileStatic": "off"
-  }
-}
+{}
