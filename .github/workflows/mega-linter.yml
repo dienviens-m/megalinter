@@ -56,11 +56,6 @@ jobs:
           # If you use VALIDATE_ALL_CODEBASE = true, you can remove this line to
           # improve performance
           fetch-depth: 0
-      - name: Load Mega-Linter environment
-        run: |
-          set -a
-          source .mega-linter.env
-          set +a
       # MegaLinter
       - name: MegaLinter
 
