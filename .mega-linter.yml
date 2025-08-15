@@ -1,12 +1,12 @@
 # Configuration file for MegaLinter
 # See all available variables at https://megalinter.io/latest/config-file/ and in linters documentation
 
-# Disable all linters
-DISABLE_LINTERS:
-  - all
-
 # Enable only the Groovy linter
 ENABLE:
+  - GROOVY
+
+# Enable only Groovy Linter
+ENABLE_LINTERS:
   - GROOVY
 
 # Groovy Linter settings
