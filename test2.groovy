@@ -7,5 +7,5 @@ def sayHello() {
 // Missing closing }
 
 class {
-  def name = "Oops"
+  def name = "TEST"
 }
